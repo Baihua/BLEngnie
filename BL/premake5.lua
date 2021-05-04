@@ -2,7 +2,11 @@ project "BL"
 kind "ConsoleApp"
 language "C++"
 
-includedirs{"%{wks.location}/glad/include","%{wks.location}/glfw/include","src/vendor"}
+includedirs{
+	"%{wks.location}/glad/include",
+	"%{wks.location}/glfw/include",
+	"src/vendor","src"
+	}
    
 
 links{"Glad.lib","glfw3"}
