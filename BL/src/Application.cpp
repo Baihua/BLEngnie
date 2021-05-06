@@ -18,6 +18,7 @@
 #include "test/TestColor.h"
 #include "test/TestMenu.h"
 #include "test/TestTexture.h"
+#include "Mesh.h"
 int main(void)
 {
 	GLFWwindow* window;
@@ -65,8 +66,9 @@ int main(void)
 	GLCall(glEnable(GL_BLEND));
 	GLCall(glfwSwapInterval(1));
 	
-	
-
+	Mesh mesh;
+	mesh.LoadObj("../../res/models/cube.obj");
+	//mesh.LoadObj("../../res/models/nanosuit/nanosuit.obj");
 	Renderer renderer;
 	test::Test* currentTest = nullptr;
 	test::TestMenu* testMenu = new test::TestMenu(currentTest);
